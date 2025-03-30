@@ -83,18 +83,25 @@ Assign the result to a variable named swappedString.
 
 */
 
-//Starter Code
-// Task 1
+// Starter Code
+// Task 1: Extract Code Points from Characters
 let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0); 
+let thirdCodePoint = inputString1.charCodeAt(2); 
 
-// Task 2
-let wordFromCodePoints; // Your code here
+// Task 2: Create a Word from Code Points
+let wordFromCodePoints = String.fromCharCode(72, 101, 108, 108); 
 
-// Task 3
+// Task 3: Swap First and Last Characters
 let inputString2 = "Launch";
-let swappedString; // Your code here
+
+// Extract first and last characters using Unicode code points
+let firstSwappedChar = String.fromCharCode(inputString2.charCodeAt(inputString2.length - 1)); 
+let middleSection = inputString2.slice(1, -1); 
+let lastSwappedChar = String.fromCharCode(inputString2.charCodeAt(0)); 
+
+// Build swapped string
+let swappedString = firstSwappedChar + middleSection + lastSwappedChar;
 
 // Log all results
 console.log({
